@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent; /* 배경 제거 */
+
+}
+
+.status {
+    text-align: left;
+    margin-top: 20px;
+    background-color: #e9e9e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.status p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.status span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.video-container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+}
+
+#webgazerVideoFeed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 비율 유지하며 빈틈 없이 채움 */
+    opacity: 0.7;
+    z-index: 1;
+}
+
+
+#plotting_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}

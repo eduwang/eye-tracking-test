@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGazer.js 눈 추적 앱 (개선)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>WebGazer.js 눈 추적 앱</h1>
+        <p>시선 추적 정확도를 위해 화면의 여러 지점을 클릭하여 캘리브레이션하세요.</p>
+        <div class="video-container">
+            <canvas id="plotting_canvas" width="640" height="480"></canvas>
+        </div>
+        <div class="status">
+            <p>상태: <span id="status">초기화 중...</span></p>
+            <p>시선 (X): <span id="gaze-x">N/A</span></p>
+            <p>시선 (Y): <span id="gaze-y">N/A</span></p>
+        </div>
+        <button id="calibrateButton">캘리브레이션 시작</button>
+        <button id="resetButton">데이터 리셋</button>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
